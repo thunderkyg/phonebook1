@@ -19,6 +19,10 @@
 		이름(name): <input type="text" name="name" value=""> <br>
 		핸드폰(hp): <input type="text" name="hp" value=""> <br>
 		회사(company): <input type="text" name="company" value=""> <br>
+		
+		<input type="checkbox" name="pet" value="dog"> 강아지<br>
+		<input type="checkbox" name="pet" value="cat"> 고양이<br>
+		<input type="checkbox" name="pet" value="bird"> 새 <br>
 
 		<button type="submit">등록</button>
 		<br> <br> <a href="list.jsp"> 리스트 바로가기</a>

@@ -7,19 +7,30 @@
 <%@ page import = "com.javaex.vo.PersonVo"%>
 
 <% 
+	request.setCharacterEncoding("UTF-8");
 
 	String name = request.getParameter("name");
 	String hp= request.getParameter("hp");
     String company = request.getParameter("company");
     System.out.println(name + ',' + hp + ',' + company);
     
+    //VO 묶기
     PhoneDao phoneDao = new PhoneDao();
 	PersonVo personVo = new PersonVo(name, hp, company);
+	//저장
     phoneDao.personInsert(personVo);
     
     List<PersonVo> personList = phoneDao.getPersonList();
+    
+    
+    response.sendRedirect("list.jsp");
 %>
 
+
+
+
+
+<%-- >
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,3 +65,4 @@
 	<a href="writeForm.jsp">추가번호 등록</a>
 </body>
 </html>
+--%>
